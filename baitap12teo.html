@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 12</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+
+        input {
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        label {}
+
+        #submit {
+            margin: 10px 50%;
+            padding: 5px 20px;
+            transition: all 1;
+        }
+
+        #submit:hover {
+            background-color: green;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h2>Form</h2>
+        <!-- Username: không được để trống, nhỏ nhất 4, nhiều nhất 30 -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" minlength="4" maxlength="30" required>
+        <br><br>
+
+        <!-- Password: có dấu * -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <!-- Tỉnh: lựa chọn: HCM, Vũng Tàu, Bình Dương, Khác, hiển thị 1
+lần 3 tỉnh -->
+        <label for="province">Tỉnh:</label>
+        <select id="province" name="province" size="3" required>
+            <option value="HCM">HCM</option>
+            <option value="VungTau">Vũng Tàu</option>
+            <option value="BinhDuong">Bình Dương</option>
+            <option value="Khac">Khác</option>
+        </select>
+        <br><br>
+
+        <!-- Email: kiểu email, khi mở trang sẽ tự động chọn -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Website: trang Web -->
+        <label for="website">Website:</label>
+        <input type="url" id="website" name="website">
+        <br><br>
+
+        <!-- Giới tính: nam hay nữ -->
+        <label>Giới tính:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Nam</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Nữ</label>
+        <br><br>
+
+        <!-- Ngày sinh: hiển thị theo ngày tháng năm, nhập sau ngày
+1/12023 -->
+        <label for="dob">Ngày sinh:</label>
+        <input type="date" id="dob" name="dob" min="2023-01-02" required>
+        <br><br>
+
+        <!-- Điểm: nhập số, từ 0 đến 10, mỗi bước nhảy là 0.5 -->
+        <label for="score">Điểm:</label>
+        <input type="number" id="score" name="score" min="0" max="10" step="0.5" required>
+        <br><br>
+
+        <!-- Màu yêu thích: chọn control màu -->
+        <label for="favcolor">Màu yêu thích:</label>
+        <input type="color" id="favcolor" name="favcolor">
+        <br><br>
+
+        <!-- Submit -->
+        <input id="submit" type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
